@@ -13,7 +13,6 @@ Now, How am I saying that? Because here's a ton of points that makes it awesome,
 Relatively, ExpressJS has been always the same.
 
 ```js
-
 const express = require('express')
 const app = express()
 const port = 3000
@@ -26,6 +25,7 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
 ```
+
 But Fastify makes it simple.
 
 - Require and configure
