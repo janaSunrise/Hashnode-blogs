@@ -221,4 +221,12 @@ Here are the steps to create an amazing model. We don't have a perfect model, be
 - [Tensorflow documentation](https://www.tensorflow.org/tutorials/keras/classification)
 - [My colab notebook](https://colab.research.google.com/drive/1q0jW5VSmtktWQpQg0C49xqHdyZaWi49s?usp=sharing)
 
-Thank you so much for reading this article, I hope you loved it, and learnt something awesome! If you have any queries or feedback, Hit me up in my twitter handle at [@JanaSunrise](https://twitter.com/janaSunrise)! Have a great day, See you later!
+You have reached the end. Thank you so much for reading this article, I hope you loved it, and learnt something awesome! If you have any queries or feedback, Hit me up in my twitter handle 👋 Let me know what you think of this blog! 👀
+
+**Let's connect** 🌟
+
+→ [Twitter](https://twitter.com/janaSunrise)
+
+→ [Github](https://github.com/janaSunrise)
+
+Catch you next time ✨
