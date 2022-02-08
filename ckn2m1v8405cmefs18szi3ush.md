@@ -13,17 +13,16 @@ Now, How am I saying that? Because here's a ton of points that makes it awesome,
 Relatively, ExpressJS has been always the same.
 
 ```js
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+  res.send('Hello World!');
+});
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+app.listen(3000, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
 ```
 
 But Fastify makes it simple.
@@ -37,18 +36,19 @@ Here's the same thing, but for fastify
 // Require the framework and instantiate it
 const fastify = require('fastify')({
   logger: true
-})
+});
 
 // Declare a route
 fastify.get('/', function (request, reply) {
-  reply.send({ hello: 'world' })
-})
+  reply.send({ hello: 'world' });
+});
 
 // Run the server!
 fastify.listen(3000, function (err, address) {
-  fastify.log.info(`server listening on ${address}`)
-})
+  fastify.log.info(`Server listening on ${address}`);
+});
 ```
+
 You even get lightweight choices, but robust configuration, one of them being the awesome logging. Now this is some real thing. This being simple affects it a lot, which brings us to out second point!
 
 ## Performance
@@ -83,19 +83,20 @@ Here's a Tip: Use async more, The reasons to do so:
 ```js
 const fastify = require('fastify')({
   logger: true
-})
+});
 
 fastify.get('/', async (request, reply) => {
-  return { hello: 'world' }
-})
+  return { hello: 'world' };
+});
 
 const start = async () => {
     await fastify.listen(3000)
-}
+};
+
 start()
 ```
 
-This is Just even simpler.
+This is even simpler.
 
 ## Extensibility and ecosystem
 
@@ -121,12 +122,12 @@ Here's how to get started
 ```js
 const fastify = require('fastify')({
   logger: true
-})
+});
 
 fastify.get('/', options, function (request, reply) {
-  request.log.info('Some info about the current request')
-  reply.send({ hello: 'world' })
-})
+  request.log.info('Some info about the current request');
+  reply.send({ hello: 'world' });
+});
 ```
 
 You can even customize as you want, and it's damn easy. Here's how
