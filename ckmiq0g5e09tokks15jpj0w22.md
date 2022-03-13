@@ -1,23 +1,31 @@
 ## Deep learning 101
 
-AI and Machine learning is the trendy topic now-a-days and there's another trendy term called "Deep learning". In this article we'll be covering All about deep learning, and how it works behind the scenes. Let's start!
+# What on earth is deep learning?
 
-Deep learning is a small part of machine learning that uses various algorithm inspired by the human nervous system, which makes us able to think, and work. It also implements the functioning like it. Deep learning algorithms work just like our nervous system enabling the computer to think, take decisions, and pass the information. Just like brain, these work in network, as the term **neural network** suggests.
+Artificial and machine learning are what's trending right now. Along with that, Deep learning is also what's gaining a lot of traction. We'll learn all about deep learning and behind-the-scenes in this articles. Let's start.
 
-Here's a basic structure, how the networks are structured:
+Deep learning is a subset of machine learning inspired from the Human nervous system, and uses them to function, and work to find efficient solutions to complex problems that Machine learning couldn't.
+
+The functioning is completely inspired from our nervous system, and this enables the computer so think (some sort of!), make decisions predictions and pass information. This is termed as "neural network".
+
+Here's an image to show how the networks are structured.
 
 ![0*_SH7tsNDTkGXWtZb.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611848750350/k2cju9zc1.png)
 
-#### Now, how does the layer work?
+## How do layers work in deep learning?
 
-Here, the first layer takes in the data input fed into it for learning. Then it forms the hidden neurons, that take care of various things, like:
-- Pre-processing
+Layers are the way how neurons are connected in our brain. They form a sequence, not necessarily linear, but can be concatenated with each other forming a lot of connections with each other, based on position and tasks assigned.
+
+Likewise, the first layer here takes in the data fed into it for learning. The final layer gives out the data. And, what remains in the middle are the neurons that take care of processing data, figuring out patterns and enhancing the predictions on the way.
+
+Several tasks are performed in the neurons in the middle. Such as:
+- Preprocessing
 - Feature identification
-- Prediction
+- Enhancements in prediction
 
 They are the part of the abstraction provided by any neural network. It performs all the computation for data passed from input, and passes the result to output layer.
 
-And once it gets a prediction it reached, it displays it through one of the categories / the output layers.
+And, finally, once it reaches a specific prediction, it emits that through the final layer, i.e. output layer(s).
 
 Now let's cover neural network in a nutshell.
 
@@ -26,13 +34,13 @@ Now let's cover neural network in a nutshell.
 It's a special function in neural network, which decides if a neuron / node in the network must be activated and passed in the data for calculation. It's introduced for non-linearity in the output. It's the activation function, which ultimately decides the output through the data passed, and filtered.
 We indirectly refer the crude output from network as activation.
 
-One of the popular activation function is sigmoid function.
+One of the popular activation function is ReLU function. It always lies above 0.
 
-Here's the equation
+Here's the equation.
 
-![Screenshot from 2021-01-29 14-07-34.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611909469088/-Zyr9tSY3.png)
+![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647165055726/q-VvZDwnv.png)
 
-It is usually used in output layer of a binary classification, where result is either 0 or 1, as value for sigmoid function lies between 0 and 1 only so, result can be predicted easily to be 1 if value is greater than 0.5 and 0 otherwise.
+This is used in the middle layers that will output the input directly if it is positive, otherwise, it will output zero. As the function shows (`f(x) = max(0, x)`), The value never goes below in negative, and always stays as >= 0.
 
 ## Bias
 
