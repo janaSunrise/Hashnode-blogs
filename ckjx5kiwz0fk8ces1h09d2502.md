@@ -9,7 +9,7 @@ A supervised learning algorithm analyzes the training data gathers knowledge abo
 
 For example, let's say, I have `n` columns of data, with a label for each, Where, `X` and `Y` columns are orders from `X1` and `Y1` to `Xn` to `Yn`, where `X` is the data list, which can be a single or multiple value(s) with it's paired column `Y` containing the data's label to be predicted.
 
-### Hmm, how is it represented in ML-based terms?
+### How is it represented in ML-based terms?
 
 Now in ML terminologies, Values used for training without labels or `X` is / are called predictor variables, which is used to teach the machine and Y is called the target variable, which is supposed to predicted by machine.
 
@@ -42,4 +42,4 @@ Here's the formulae behind the maths of regression:
 
 Now it's time to end this quickbite :) Hope you enjoyed it!
 
-Have a great day / evening ahead!
+Have a great day or an evening ahead!
