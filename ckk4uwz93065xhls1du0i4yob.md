@@ -17,29 +17,29 @@ This is a old library for deep learning that was worked from 2015 to 2018. The c
 
 - [Tensorflow](https://tensorflow.org)
 
-As their description says "The core open source library to help you develop and train ML models." and Yeah, that's really true. It's open source since 2018, and providing a lot of unique methods and ways for training methods, and counting. It has recently added audio based model predictions, and tensorflow reinforcement learning under beta!
-Amazing right?
+As their description says "The core open source library to help you develop and train ML models." and Yeah, that's really true. It's open source since 2018, and providing a lot of unique methods and ways for training methods, and counting. It has recently added audio based model predictions, and tensorflow reinforcement learning too. Amazing right?
 
 - [Pytorch](https://pytorch.org/)
 
-PyTorch is an amazing library constituting to the deep learning ecosystem. It is an open source machine learning framework that accelerates the path from research prototyping to production deployment. Providing numerous ways to deploy your model everywhere, training your model, and also exposing the **C++ API**!!!
-so, that you can use C++ for faster model training and integrate into python :)
+PyTorch is an amazing library constituting to the deep learning ecosystem. It is an open source machine learning framework that accelerates the path from research prototyping to production deployment. Providing numerous ways to deploy your model everywhere, training your model, and also exposing the **C++ API**!
+
+You can integrate the C++ API for optimized code and integration into Python.
 
 - [OpenCV](https://opencv.org/)
 
 OpenCV is a great library based on computer vision and camera based model detection. It is used for face detection and various more implementations requiring vision. It also has amazing prebuilt models ready for use.
 
-##  Awesome classification algorithms list
+##  Machine learning algorithms for classification
 
-- Logistic regression
-- Decision tree
-- Random forest
-- Gradient boost
+- Logistic regression.
+- Decision trees.
+- Random forest.
+- Gradient boosting.
 - SVC
-- K neighbors
-- Naive bayes
+- K neighbors.
+- Naive Bayes.
 
-## Awesome regression algorithms list
+## Machine learning regression algorithms
 
 - Simple Linear Regression model.
 - Lasso Regression.
