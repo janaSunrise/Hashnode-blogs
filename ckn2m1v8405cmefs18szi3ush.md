@@ -8,7 +8,7 @@ But, It's time to change. Why? because it's better.
 
 Now, How am I saying that? Because here's a ton of points that makes it awesome, and really cool to use!
 
-## Simpleness
+## Simplicity
 
 Relatively, ExpressJS has been always the same.
 
@@ -25,39 +25,37 @@ app.listen(3000, () => {
 });
 ```
 
-But Fastify makes it simple.
+But Fastify makes it simple as so:
+- Import, and configure.
+- Run the server!
 
-- Require and configure
-- Run!
-
-Here's the same thing, but for fastify
+Here's the same thing, but using Fastify:
 
 ```js
-// Require the framework and instantiate it
 const fastify = require('fastify')({
   logger: true
 });
 
-// Declare a route
 fastify.get('/', function (request, reply) {
   reply.send({ hello: 'world' });
 });
 
-// Run the server!
 fastify.listen(3000, function (err, address) {
   fastify.log.info(`Server listening on ${address}`);
 });
 ```
 
-You even get lightweight choices, but robust configuration, one of them being the awesome logging. Now this is some real thing. This being simple affects it a lot, which brings us to out second point!
+You even get lightweight choices, but robust configuration, one of them being the awesome logging. This being simple affects it a lot, which brings us to out second point!
 
 ## Performance
 
-As a comparison of their code, ExpressJS has a ton of code, while fastify does just few files, hence keeping light and easy to get started and use.
+ExpressJS is pretty evolved, and so is the codebase - But, there's a lot of unnecessary things, we won't use yet still included, which kind of degrades the performance. Fastify solves that by enabling you to use only what you need, and have a plugin-ecosystem to make it amazing to work with.
 
-You might be wondering, "Soo.... How does it even affect?"
+This makes you wonder - "How does it even affect?", right?
 
-It does. A lot. When there's a lot of things going in the backend, they have to process everything, after reading, and interpreting. Basically that increases the time taken, and makes it slower. Fastify did make a interesting decision to fix this, we'll be talking about that. But for now, It's pretty lightweight and the same thing is done in fewer lines of code, and Yet it didn't stop from providing power in your hands. Here's what It can do without any additional dependencies, or anything.
+It does. A lot. A lot of things take place on backend, during processing after read and interpretation.
+
+Basically that increases the time taken, and makes it slower. Fastify did make a interesting decision to fix this, we'll be talking about that. But for now, It's pretty lightweight and the same thing is done in fewer lines of code, and Yet it didn't stop from providing power in your hands. Here's what It can do without any additional dependencies, or anything.
 
 ![Screenshot from 2021-04-02 14-33-42.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1617354233775/STzzOgmtv.png)
 
@@ -65,20 +63,18 @@ Here's the benchmark too!
 
 ![Screenshot from 2021-04-04 12-51-59.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1617520963092/mcVPYPzw1.png)
 
-It even outperformed all other frameworks by 4 or 5 times :D
+It even outperformed all other frameworks by 4 or 5 times! Isn't it crazy?
 
-Isn't it crazy? Yeah, that's the the outer thing, wait for to explore more :)
-
-## Async and speed
+## Async API and speed
 
 Fastify has better grasp over async, allowing multiprocessing instead of threading, and running it in coroutines to speed things in the background.
 
 Here's a Tip: Use async more, The reasons to do so:
 
-- Speed
-- Multiple processing at once
-- Coroutines
-- The code is less and easier!
+Stick to using the Async API more. Here's why:
+- Speed gains
+- Enabling to run other tasks when current one is pending.
+- The code is less and easy.
 
 ```js
 const fastify = require('fastify')({
@@ -93,19 +89,18 @@ const start = async () => {
     await fastify.listen(3000)
 };
 
-start()
+start();
 ```
 
 This is even simpler.
 
 ## Extensibility and ecosystem
 
-Yay! Time to discuss fastify ecosystem. But before we do that, Here's the thing
-
+Yay! Time to discuss fastify ecosystem. But before we do that, here's an image:
 
 ![Screenshot from 2021-04-02 14-44-28.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1617357435841/1u7AoX_Gw.png)
 
-As you see in the diagram, ExpressJS has a single package only with everything cluttered and included which tries to make people to use it because it has everything bundled together.
+As seen in the image, Express has a single package with everything cluttered and included, which tries to make people to use it because it has everything bundled together.
 
 But that's not the case with fastify. They have a ecosystem, and make separate packages for each thing, keeping each thing lightweight, and transparent. You realize what's being used, what's needed and other stuff. They have "Plugins" to do things which you want to do, but isn't unfortunately available in root package, Hence this way everything's organized, and clean. Even if you can't find plugin for your job, It's damn easy to make one, trust me.
 
@@ -135,10 +130,12 @@ You can even customize as you want, and it's damn easy. Here's how
 ```js
 const fastify = require('fastify')({
   logger: {
+    // Pretty output
     prettyPrint: true,
+
+    // Serializers for logging of request and response.
     serializers: {
       res (reply) {
-        // The default
         return {
           statusCode: reply.statusCode
         }
@@ -159,21 +156,19 @@ const fastify = require('fastify')({
 
 ## Typescript support
 
-Usually people love working with TypeScript now-a-days, and It's pretty awesome. Fastify has inbuilt support for TypeScript too!!
+Usually people love working with TypeScript now-a-days, and It's pretty awesome. Fastify has inbuilt support for TypeScript too.
 
-You just add typescript with fastify, and Just write the code for it, as it is for JS, and it just works fine, Bam!
+You just add typescript with fastify, and Just write the code for it, as it is for JS, and it just works fine.
 
 Fastify is shipped with a typings file, but you may need to install `@types/node`, depending on the Node.js version you are using.
 
-We pass the relevant typings for our http version used.
+We pass the relevant typings for our http version used. By passing types we get correctly typed access to the underlying http objects in routes.
 
-By passing types we get correctly typed access to the underlying http objects in routes.
+If using http2, we would pass `<http2.Http2Server, http2.Http2ServerRequest, http2.Http2ServerResponse>`.
 
-If using http2 we'd pass `<http2.Http2Server, http2.Http2ServerRequest, http2.Http2ServerResponse>`.
+For https pass, `http2.Http2SecureServer` or `http.SecureServer` instead of Server.
 
-For https pass http2.Http2SecureServer or http.SecureServer instead of Server.
-
-This ensures within the server handler we also get http.ServerResponse with correct typings on reply.res.
+This ensures within the server handler we also get `http.ServerResponse` with correct typings on reply.res.
 
 Here's the guide for it: [Fastify TypeScript](https://www.fastify.io/docs/latest/TypeScript/)
 
@@ -190,11 +185,12 @@ fastify.route({
   method: 'GET',
   url: '/',
   schema: {
-    // request needs to have a querystring with a `name` parameter
+    // Request needs to have a querystring with a `name` parameter
     querystring: {
       name: { type: 'string' }
     },
-    // the response needs to be an object with an `hello` property of type 'string'
+
+    // The response needs to be an object with an `hello` property of type 'string'
     response: {
       200: {
         type: 'object',
@@ -204,10 +200,12 @@ fastify.route({
       }
     }
   },
+
   // this function is executed for every request before the handler is executed
   preHandler: async (request, reply) => {
     // E.g. check authentication
   },
+
   handler: async (request, reply) => {
     return { hello: 'world' }
   }
@@ -263,5 +261,7 @@ It's gonna be the future, I predict. Anything that's good, always survives the s
 - [Fastify github](https://github.com/fastify/fastify)
 - [Fastify ecosystem](https://fastify.io/ecosystem)
 
-Thank you so much for reading this article, I hope you loved it, and learnt something awesome! If you have any queries or feedback, Hit me up in my twitter handle at [@JanaSunrise](https://twitter.com/janaSunrise)! Have a great day, See you later!
+Thank you so much for reading this article, I hope you loved it, and learnt something awesome! If you have any queries or feedback, Hit me up in my twitter handle at [@JanaSunrise](https://twitter.com/janaSunrise)! 
+
+Have a great day, See you later!
 
