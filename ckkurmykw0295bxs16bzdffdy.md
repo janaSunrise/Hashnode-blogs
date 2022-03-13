@@ -45,13 +45,12 @@ Some ROC AUC Terms:
 
 ![Screenshot from 2021-02-05 11-21-05.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1612504315519/paqbo558M.png)
 
-
 ## What's hyperparameter tuning?
 
 Hyperparameters are several model parameters that need to be tweaked and played with for the optimal learning and predictions.
 And, Hyperparameter tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm.
 
-## Okay, Now what does RMSE mean?
+## What does RMSE mean?
 
 Root Mean Square Error (RMSE) is the standard deviation of the residuals (prediction errors). Residuals are a measure of how far from the regression line data points are. RMSE is a measure of how spread out these residuals are around.
 
